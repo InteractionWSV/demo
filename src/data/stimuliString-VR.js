@@ -1,0 +1,1 @@
+const stimuli = ["varifocalReader.png"]

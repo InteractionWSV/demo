@@ -1,0 +1,92 @@
+
+.entity {
+	position: relative;
+}
+
+.entity.clonedWSV{
+	cursor: pointer;
+}
+
+.sparklificated {
+	position: relative;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.sparklificated.clonedWSV {
+	position: absolute;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.sparkline {
+	position: absolute;
+}
+
+.sparkline svg {
+	overflow: visible;
+}
+
+.sparkline .voronoi path {
+	fill: none;
+	pointer-events: all;
+	stroke-opacity: 0;
+}
+
+.sparkline .zeroLine{
+	fill: none;
+	stroke: #aaa;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;
+}
+
+.sparkline .dropLine{
+	fill: none;
+	stroke: #aaa;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;
+}
+
+.sparkline .lowestHighestLine{
+	stroke: #666;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+.sparkline .aboveZeroArea{
+	fill: rgba(166, 217, 106, .5);
+	stroke: none;
+}
+
+.sparkline .belowZeroArea{
+	fill: rgba(244, 109, 67, .5);
+	stroke: none;
+}
+
+.sparkline .endCircle{
+	fill: black;
+	stroke: none;
+}
+
+.sparkline .minCircle{
+	stroke-width: 1px;
+	stroke: black;
+	fill: rgb(244, 109, 67);
+}
+
+.sparkline .maxCircle{
+	stroke-width: 1px;
+	stroke: black;
+	fill: rgb(138, 212, 52);
+}
+
+.sparkline .hoverCircle {
+	stroke: #000;
+	stroke-width: 1px;
+}
+
+.sparkline .hoverCircle text{
+	font-size:8pt;
+	stroke:#333;
+	font-weight: 100;
+}

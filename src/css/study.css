@@ -1,0 +1,304 @@
+body {
+	font: 18px Helvetica;
+	margin: 20px;
+	background-color: #fff;
+}
+
+#document a {
+	display:none; /* Hide links at the top of the articles. */
+}
+
+#document{
+	max-width: 700px;
+	margin:auto;
+	visibility: hidden;
+}
+
+.smaller {
+  font: 10px Helvetica;
+}
+
+
+#text {
+	line-height: 1.5;
+}
+
+
+.entity {
+	background-color: #ffdf80;
+}
+
+/* .entity {
+	font-weight: bold;
+	color: rgb(188, 69, 80);
+	background-color: white;
+} */
+
+.entity:hover {
+	background: #ffecb3;
+}
+
+
+.currentEntity:not(.sparkline) {
+	background-color: #ffcf40;
+}
+
+
+.entity.selected {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ffca2b;
+}
+
+
+.entity.showInLayout {
+	/*border-style: solid;
+	border-width: 1px;*/
+	background-color: #e6ac00;
+}
+
+
+.movedWSV {
+	stroke: green;
+}
+
+
+path {
+	fill: #000000;
+	stroke: #000000;
+}
+
+
+/*debugging*/
+/*.clonedWSV.sparklificated {
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
+}*/
+
+
+/*.test {
+	border-style: solid;
+	border-width: 2px;
+	border-color: blue;
+}*/
+
+
+.beingDragged {
+	background-color: #eebe30;
+
+	/*cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;*/
+}
+
+
+.hide {
+	/*opacity: 0;*/
+	display: none;
+}
+
+
+.hoveringTrail path {
+	fill: none;
+	stroke: blue;
+	stroke-width: 1.5px;
+}
+
+
+.wsvMovement {
+	fill: none;
+	stroke: green;
+	stroke-width: 1px;
+}
+
+
+.addBefore {
+	border-top-style: solid;
+	border-left-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+
+
+.addAfter {
+	border-bottom-style: solid;
+	border-right-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+
+
+/* the compare has only an influence on the background color of the entity */
+.compare .entity.clonedWSV {
+	background-color: #eebe30;
+}
+
+
+.tooltip {
+	background: #eee;
+	padding: 2px;
+	position: absolute;
+	text-align: center;
+	color: #FFF;
+	font-size: .75em;
+	z-index: 999;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	transition: opacity 0.3s;
+	opacity: 0.75;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.box {
+	padding: 3px;
+}
+
+.box:not(.notSelectable):hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.box.notSelectable {
+	opacity: 0.2;
+	pointer-events: none;
+}
+
+.box.currentSeletedLayout {
+	border-color: #1af0ff;
+	opacity: 0.2;
+	pointer-events: none;
+}
+
+
+img.icon {
+	width: 20px;
+	height: auto;
+}
+
+
+
+/* suggested interactivity */
+/* https://css-tricks.com/examples/ShapesOfCSS/ */
+#triangle_left {
+	position: absolute;
+	top: calc(100% - 50%);
+
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 30px solid #00becc;
+	border-bottom: 15px solid transparent;
+
+	/*background-color: #ffffff;*/
+	z-index: 999;
+}
+
+
+#triangle_right {
+	position: absolute;
+	top: calc(100% - 50%);
+
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-left: 30px solid #00becc;
+	border-bottom: 15px solid transparent;
+
+	/*background-color: #ffffff;*/
+
+	z-index: 999;
+}
+
+#triangle_left:active, #triangle_right:active {
+	box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+
+#orientation_circles {
+	position: absolute;
+
+	background-color: #ffffff;
+
+	z-index: 999;
+}
+
+
+.comparisonPossible {
+	background-color: #9fff80;
+}
+
+
+.whiteLayer {
+	box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.3);
+	border: 0.5px solid #eee;
+	background-color: #fdfdfd;
+}
+
+/* styling the rest page */
+
+.condition {
+	display: flex;
+	/* align horizontal */
+	justify-content: center;
+	/* align vertical */
+	height: 100%;
+	/* align-items: center; */
+	align-items: stretch;
+}
+
+.conditionDescription p {
+	text-align: center;
+}
+
+.conditionDescription h1.interactive {
+	/* color: red; */
+	/* color: #2196f3; */
+	text-align: center;
+	/* color: #d01c8b; */
+	color: #f4a582;
+}
+
+.conditionDescription h1.static {
+	/* color: red; */
+	/* color: #2196f3; */
+	text-align: center;
+	color: #92c5de;
+}
+
+.conditionDescription h1.changeTask {
+	/* color: red; */
+	/* color: #2196f3; */
+	text-align: center;
+	color: #a6cee3;
+}
+
+.conditionDescription h1.break {
+	/* color: red; */
+	/* color: #2196f3; */
+	text-align: center;
+	color: #f3a5d5;
+}
+
+.conditionDescription p.changeTask {
+	color: #a6cee3;
+	max-width: 700px;
+}
+
+
+.quote {
+	border: 1px solid lightgrey;
+	box-shadow: lightgrey 5px 5px 10px;
+}
+
+.breakParagraph {
+	font-size: 25px;
+	color: #f3a5d5;
+	/* max-width: 700px; */
+}
+
+li.moreSpace {
+  padding-top: 15px;
+}

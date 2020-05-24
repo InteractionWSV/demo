@@ -1,0 +1,1 @@
+const aois = {"varifocalReader.png":["Chapter","NONE","Page","Paragraph","Subchapter","Text"]}
